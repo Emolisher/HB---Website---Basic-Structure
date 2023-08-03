@@ -1,0 +1,72 @@
+@font-face {
+    font-family: "Boardley Demo.ttf";
+    src: url("fonts3/Boardley Demo.ttf") format("ttf");
+}
+@font-face {
+    font-family: "Chomsky.otf";
+    src: url("fonts3/Chomsky.otf") format("otf")
+}
+body{
+    margin: 0;
+}
+.wrapper3{
+    height: 100vh;  /* gets the H of the screen */
+    overflow-y:auto; 
+    /* if it overflows - scrolls for us IN THE WRAPPER*/
+    overflow-x: hidden; /* remove horizontal scrollbars */
+    perspective: 10px; /* how far away is smh fm the monitor doesnt matter if it's 10px or 100px; arranges relative to the rank */
+}
+
+header{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* takes the full H of screen */
+    transform-style: preserve-3d; /* allows us to work in 3d */
+    z-index: -1; /* important - to show our elements behind the text section */
+}
+/* now to PSN into place */
+.background3,
+.foreground3 {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    /* to have the right aspect ratio - no matter the screen size */
+    z-index: -1;
+}
+.background3 {
+    transform: translateZ(-10px) scale(2);
+}
+.foreground3 {
+    transform: translateZ(-10px) scale(2);
+}
+/* .title3{
+ margin: 0;
+text-shadow: 0 0 5px black;
+font-family: "Chomsky" ;
+color: white;
+} */
+.p1 {
+margin: 0;
+text-shadow: 0 0 8px rgb(41, 40, 40);
+font-family: "Chomsky" ;
+margin-left: 17px;
+font-weight: 100;
+color: rgba(167, 157, 157, 0.781);
+font-size: 72px;
+}
+.p2 {
+    margin: 0;
+    text-shadow: 0 0 5px rgb(39, 38, 38);
+    font-family: "Boardley Demo" ;
+    color: rgba(195, 139, 17, 0.76);
+    font-size: 53px;
+}
+section {
+    font-size: 2rem;
+    padding: 2rem;
+    background-color: #333;
+    color: rgb(207, 198, 198);
+}
